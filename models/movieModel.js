@@ -1,29 +1,37 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import UserModel from './userModel.js';
 
-const MovieSchema = new mongoose.Schema(
+const movieSchema = new mongoose.Schema(
     {
-        judul : {
+        judul:{
             type: String,
             unique: true,
             required: true,
             trim: true
         },
-        tahunRilis : {
+
+        tahunRilis:{
             type: String,
             required: true,
             trim: true
         },
-        sutradara : {
+
+        sutradara:{
             type: String,
             required: true,
             trim: true
+        },
+        
+        createdBy:{
+            type: mongoose.Types.ObjectId,
+            ref: UserModel
         }
     },
-    {
-        timestamps : true
+    { 
+        timestamps: true,
     }
 );
 
-const movieModel = mongoose.model("movie", MovieSchema)
+const movieModel = mongoose.model('movies', movieSchema);
 
 export default movieModel;
