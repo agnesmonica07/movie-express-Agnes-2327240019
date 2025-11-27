@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "5550013a-e7b0-4aad-8ce1-e29fe529db88",
+		"name": "movieexpress",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49014568",
+		"_collection_link": "https://agnesmonica071205-5052342.postman.co/workspace/Agnes-Monica's-Workspace~7759ebe2-16b8-4048-858f-ab4123bbe840/collection/49014568-5550013a-e7b0-4aad-8ce1-e29fe529db88?action=share&source=collection_link&creator=49014568"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "sign in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"agnes\",\r\n  \"email\": \"agnesmonica071205@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
